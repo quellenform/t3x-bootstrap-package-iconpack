@@ -1,0 +1,109 @@
+# Set templates and dataProcessing
+lib.contentElement {
+  templateRootPaths {
+    5 = EXT:bootstrap_package_iconpack/Resources/Private/Templates/ContentElements/
+  }
+  partialRootPaths {
+    5 = EXT:bootstrap_package_iconpack/Resources/Private/Partials/ContentElements/
+  }
+}
+
+# PAGE
+page {
+  10 {
+    dataProcessing {
+      10 {
+        dataProcessing {
+          1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+          1628754217 {
+            iconSet.field = page_icon_enable
+            iconIdentifier.field = page_icon
+          }
+        }
+      }
+      20 {
+        dataProcessing {
+          1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+          1628754217 {
+            iconSet.field = page_icon_enable
+            iconIdentifier.field = page_icon
+          }
+        }
+      }
+      30 {
+        dataProcessing {
+          1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+          1628754217 {
+            iconSet.field = page_icon_enable
+            iconIdentifier.field = page_icon
+          }
+        }
+      }
+      1629126321 {
+        dataProcessing {
+          1629202464 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+          1629202464 {
+            iconSet.field = page_icon_enable
+            iconIdentifier.field = page_icon
+          }
+        }
+      }
+    }
+  }
+}
+
+# CTYPE: BOOTSTRAP PACKAGE TEXTICON
+tt_content.texticon {
+  dataProcessing {
+    1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+    1628754217 {
+      iconSet.field = iconpack_enable
+      iconIdentifier.field = iconpack
+    }
+  }
+}
+
+# CTYPE: tx_bootstrappackage_icon_group_item
+tt_content.icon_group {
+  dataProcessing {
+    20 {
+      dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = iconpack_enable
+          iconIdentifier.field = iconpack
+        }
+      }
+    }
+  }
+}
+
+# CTYPE: tx_bootstrappackage_card_group_item
+tt_content.card_group {
+  dataProcessing {
+    20 {
+      dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = iconpack_enable
+          iconIdentifier.field = iconpack
+        }
+      }
+    }
+  }
+}
+
+# CTYPE: tx_bootstrappackage_timeline_item
+tt_content.timeline {
+  dataProcessing {
+    10 {
+      dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = iconpack_enable
+          iconIdentifier.field = iconpack
+        }
+      }
+    }
+  }
+}
