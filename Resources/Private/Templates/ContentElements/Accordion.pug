@@ -1,0 +1,42 @@
+//- doctype html
+html(xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:i="http://typo3.org/ns/Quellenform/Iconpack/ViewHelpers" data-namespace-typo3-fluid="true")
+    f:layout(name="Default")/
+    f:section(name="Main")
+
+        f:if(condition="{records}")
+            f:variable(name="activeElement" value="{data.pi_flexform.default_element}")/
+            f:variable(name="currentVariants" value="{variants}")/
+            div( class="accordion" id="accordion-{data.uid}")
+                f:for(each="{records}" as="record" iteration="iteration")
+                    div(class="accordion-item")
+                        #{'h{data.subitems_header_layout}'}(class="accordion-header" id="accordion-heading-{data.uid}-{record.data.uid}")
+                            button(
+                                class="accordion-button{f:if(condition: '{activeElement} == {record.data.uid}', else:' collapsed')}"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#accordion-{data.uid}-{record.data.uid}"
+                                data-bs-parent="#accordion-{data.uid}"
+                                aria-expanded="{f:if(condition: '{activeElement} == {record.data.uid}', then: 'true', else: 'false')}"
+                                aria-controls="accordion-{data.uid}-{record.data.uid}"
+                            )
+
+                                f:if(condition="{record.data.iconpack}")
+                                    span(class="btn-icon")
+                                        i:icon(iconfig="{record.data.iconpack}")/
+
+                                |{record.data.header}
+                        div(
+                            id="accordion-{data.uid}-{record.data.uid}"
+                            class="accordion-collapse collapse{f:if(condition: '{activeElement} == {record.data.uid}', then: ' show')}"
+                            aria-labelledby="accordion-heading-{data.uid}-{record.data.uid}"
+                            data-bs-parent="#accordion-{data.uid}"
+                        )
+                            div(class="accordion-body")
+                                div(class="accordion-content accordion-content-{record.data.mediaorient}")
+                                    f:if(condition="{record.files}")
+                                        div(class="accordion-content-item accordion-content-media")
+                                            f:variable(name="imageConfig")|{settings.responsiveimages.contentelements.accordion.{record.data.mediaorient}}
+                                            #{'bk2k:data.imageVariants'}(as="variants" variants="{currentVariants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}")/
+                                            f:render(partial="Media/Gallery" arguments="{files: record.files, data: record.data, settings: settings, variants: variants}")/
+                                    div(class="accordion-content-item accordion-content-text")
+                                        #{'f:format.html'}|{record.data.bodytext}

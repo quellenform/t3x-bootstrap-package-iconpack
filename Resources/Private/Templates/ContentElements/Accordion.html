@@ -17,9 +17,9 @@
                             data-bs-parent="#accordion-{data.uid}"
                             aria-expanded="{f:if(condition: '{activeElement} == {record.data.uid}', then: 'true', else: 'false')}"
                             aria-controls="accordion-{data.uid}-{record.data.uid}"
-                        >
+                            >
                             <f:if condition="{record.data.iconpack}">
-                                <span class="btn-icon"><i:icon iconfig="{record.data.iconpack}"/></span>
+                                <span class="btn-icon"><i:icon iconfig="{record.data.iconpack}" /></span>
                             </f:if>
                             {record.data.header}
                         </button>

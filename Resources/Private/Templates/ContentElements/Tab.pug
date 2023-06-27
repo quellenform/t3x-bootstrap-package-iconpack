@@ -1,0 +1,50 @@
+//- doctype html
+html(xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:i="http://typo3.org/ns/Quellenform/Iconpack/ViewHelpers" data-namespace-typo3-fluid="true")
+    f:layout(name="Default")/
+    f:section(name="Main")
+
+        f:if(condition="{records}")
+            f:variable(name="activeTab")
+                |{records.0.data.uid}
+            f:if(condition="{data.pi_flexform.default_tab}")
+                f:for(each="{records}" as="record" iteration="iteration")
+                    f:if(condition="{data.pi_flexform.default_tab} == {record.data.uid} || {data.pi_flexform.default_tab} == {record.data._LOCALIZED_UID}")
+                        f:variable(name="activeTab")|{record.data.uid}
+
+            f:variable(name="currentVariants" value="{variants}")/
+
+            div(class="tab-navigation")
+                div(class="nav nav-tabs" id="tab-{data.uid}" role="tablist")
+                    f:for(each="{records}" as="record" iteration="iteration")
+                        button(
+                            class="nav-link{f:if(condition: '{activeTab} == {record.data.uid}',then: ' active')}"
+                            id="tab-{data.uid}-{record.data.uid}"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tabcontent-{data.uid}-{record.data.uid}"
+                            type="button"
+                            role="tab"
+                            aria-controls="tabcontent-{data.uid}-{record.data.uid}"
+                            aria-selected="{f:if(condition: '{activeTab} == {record.data.uid}',then: 'true', else: 'false')}"
+                        )
+                            f:if(condition="{record.data.iconpack}")
+                                span(class="btn-icon")
+                                    i:icon(iconfig="{record.data.iconpack}")/
+
+                            span|{record.data.header}
+
+            div(class="tab-content" id="tabcontent-{data.uid}")
+                f:for(each="{records}" as="record" iteration="iteration")
+                    div(
+                        class="tab-pane fade{f:if(condition: '{activeTab} == {record.data.uid}',then: ' show active')}"
+                        id="tabcontent-{data.uid}-{record.data.uid}"
+                        role="tabpanel"
+                        aria-labelledby="tab-{data.uid}-{record.data.uid}"
+                    )
+                        div(class="tab-pane-content tab-pane-content-{record.data.mediaorient}")
+                            f:if(condition="{record.files}")
+                                div(class="tab-pane-content-item tab-pane-content-media")
+                                    f:variable(name="imageConfig")|{settings.responsiveimages.contentelements.tab.{record.data.mediaorient}}
+                                    #{'bk2k:data.imageVariants'}(as="variants" variants="{currentVariants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}")/
+                                    f:render(partial="Media/Gallery" arguments="{files: record.files, data: record.data, settings: settings, variants: variants}")/
+                            div(class="tab-pane-content-item tab-pane-content-text")
+                                #{'f:format.html'}|{record.data.bodytext}
