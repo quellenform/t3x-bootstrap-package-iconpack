@@ -24,7 +24,7 @@ html(xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:i="http://t
                                     span(class="btn-icon")
                                         i:icon(iconfig="{record.data.iconpack}")/
 
-                                |{record.data.header}
+                                | {record.data.header}
                         div(
                             id="accordion-{data.uid}-{record.data.uid}"
                             class="accordion-collapse collapse{f:if(condition: '{activeElement} == {record.data.uid}', then: ' show')}"
@@ -35,8 +35,8 @@ html(xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:i="http://t
                                 div(class="accordion-content accordion-content-{record.data.mediaorient}")
                                     f:if(condition="{record.files}")
                                         div(class="accordion-content-item accordion-content-media")
-                                            f:variable(name="imageConfig")|{settings.responsiveimages.contentelements.accordion.{record.data.mediaorient}}
+                                            f:variable(name="imageConfig") {settings.responsiveimages.contentelements.accordion.{record.data.mediaorient}}
                                             #{'bk2k:data.imageVariants'}(as="variants" variants="{currentVariants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}")/
                                             f:render(partial="Media/Gallery" arguments="{files: record.files, data: record.data, settings: settings, variants: variants}")/
                                     div(class="accordion-content-item accordion-content-text")
-                                        #{'f:format.html'}|{record.data.bodytext}
+                                        #{'f:format.html'} {record.data.bodytext}
