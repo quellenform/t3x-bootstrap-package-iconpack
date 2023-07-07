@@ -1,6 +1,6 @@
 <?php
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') || die();
 
 // Register fields
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(

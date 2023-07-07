@@ -21,5 +21,5 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => ['Quellenform\\BootstrapPackageIconpack\\' => 'Classes']
-    ],
+    ]
 ];
