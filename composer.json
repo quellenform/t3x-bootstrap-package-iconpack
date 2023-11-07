@@ -1,45 +1,49 @@
 {
-  "name": "quellenform/t3x-bootstrap-package-iconpack",
-  "type": "typo3-cms-extension",
-  "description": "Replaces the icons in bootstrap_package with iconpacks.",
-  "keywords": [
-    "TYPO3",
-    "extension",
-	"bootstrap",
-    "icons"
-  ],
-  "license": [
-    "GPL-3.0-or-later"
-  ],
-  "homepage": "https://extensions.typo3.org/extension/bootstrap_package_iconpack",
-  "support": {
-    "source": "https://github.com/quellenform/t3x-bootstrap-package-iconpack",
-    "issues": "https://github.com/quellenform/t3x-bootstrap-package-iconpack/issues"
-  },
-  "authors": [{
-    "name": "Stephan Kellermayr",
-    "email": "typo3@quellenform.at",
-    "role": "Developer",
-    "homepage": "https://www.quellenform.at/"
-  }],
-  "require": {
-    "php": ">=7.5.0",
-    "typo3/cms-core": "^10.4 || ^11",
-	"quellenform/t3x-iconpack": "^0.2 || ^0.3",
-	"bk2k/bootstrap-package": "^13 || ^14"
-  },
-  "autoload": {
-    "psr-4": {
-      "Quellenform\\BootstrapPackageIconpack\\": "Classes"
-    }
-  },
-  "repositories": [{
-    "type": "composer",
-    "url": "https://composer.typo3.org/"
-  }],
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "bootstrap_package_iconpack"
-    }
-  }
+	"name": "quellenform/t3x-bootstrap-package-iconpack",
+	"type": "typo3-cms-extension",
+	"description": "Replaces the icons in bootstrap_package with iconpacks.",
+	"keywords": [
+		"TYPO3",
+		"extension",
+		"bootstrap",
+		"icons"
+	],
+	"license": [
+		"GPL-3.0-or-later"
+	],
+	"homepage": "https://extensions.typo3.org/extension/bootstrap_package_iconpack",
+	"support": {
+		"source": "https://github.com/quellenform/t3x-bootstrap-package-iconpack",
+		"issues": "https://github.com/quellenform/t3x-bootstrap-package-iconpack/issues"
+	},
+	"authors": [
+		{
+			"name": "Stephan Kellermayr",
+			"email": "typo3@quellenform.at",
+			"role": "Developer",
+			"homepage": "https://www.quellenform.at/"
+		}
+	],
+	"require": {
+		"php": ">=7.5.0",
+		"typo3/cms-core": ">=10.4 <13",
+		"quellenform/t3x-iconpack": ">=0.2 ^1.0",
+		"bk2k/bootstrap-package": ">=12.0.10 <15"
+	},
+	"autoload": {
+		"psr-4": {
+			"Quellenform\\BootstrapPackageIconpack\\": "Classes"
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	],
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "bootstrap_package_iconpack"
+		}
+	}
 }
