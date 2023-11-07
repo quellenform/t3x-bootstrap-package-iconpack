@@ -29,6 +29,10 @@ $GLOBALS['TCA']['pages']['columns'] = array_replace_recursive(
         ],
         'nav_icon' => [
             'displayCond' => 'FIELD:page_icon_enable:REQ:false'
+        ],
+        // Hide original icon field from EXT:bootstrap_package
+        'nav_icon_identifier' => [
+            'displayCond' => 'FIELD:nav_icon_set:=:3',
         ]
     ]
 );
