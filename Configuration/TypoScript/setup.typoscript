@@ -152,3 +152,31 @@ tt_content.timeline {
     }
   }
 }
+
+# CTYPE: MENU CARD SUBPAGES
+tt_content.menu_card_dir {
+  dataProcessing {
+    20 {
+      dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = page_icon_enable
+          iconIdentifier.field = page_icon
+        }
+      }
+    }
+  }
+}
+tt_content.menu_card_list {
+  dataProcessing {
+    20 {
+      dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = page_icon_enable
+          iconIdentifier.field = page_icon
+        }
+      }
+    }
+  }
+}
