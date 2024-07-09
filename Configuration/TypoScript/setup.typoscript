@@ -63,21 +63,6 @@ tt_content.texticon {
   }
 }
 
-# CTYPE: tx_bootstrappackage_accordion_item
-tt_content.accordion {
-  dataProcessing {
-    20 {
-      dataProcessing {
-        2212170002 = Quellenform\Iconpack\DataProcessing\IconpackProcessor
-        2212170002 {
-          fieldName = bodytext
-          fieldType = rte
-        }
-      }
-    }
-  }
-}
-
 # CTYPE: tx_bootstrappackage_icon_group_item
 tt_content.icon_group {
   dataProcessing {
@@ -87,11 +72,6 @@ tt_content.icon_group {
         1628754217 {
           iconSet.field = iconpack_enable
           iconIdentifier.field = iconpack
-        }
-        2212170002 = Quellenform\Iconpack\DataProcessing\IconpackProcessor
-        2212170002 {
-          fieldName = bodytext
-          fieldType = rte
         }
       }
     }
@@ -108,26 +88,6 @@ tt_content.card_group {
           iconSet.field = iconpack_enable
           iconIdentifier.field = iconpack
         }
-        2212170002 = Quellenform\Iconpack\DataProcessing\IconpackProcessor
-        2212170002 {
-          fieldName = bodytext
-          fieldType = rte
-        }
-      }
-    }
-  }
-}
-
-# CTYPE: tx_bootstrappackage_tab_item
-tt_content.tab {
-  dataProcessing {
-    20 {
-      dataProcessing {
-        2212170002 = Quellenform\Iconpack\DataProcessing\IconpackProcessor
-        2212170002 {
-          fieldName = bodytext
-          fieldType = rte
-        }
       }
     }
   }
@@ -142,11 +102,6 @@ tt_content.timeline {
         1628754217 {
           iconSet.field = iconpack_enable
           iconIdentifier.field = iconpack
-        }
-        2212170002 = Quellenform\Iconpack\DataProcessing\IconpackProcessor
-        2212170002 {
-          fieldName = bodytext
-          fieldType = rte
         }
       }
     }
