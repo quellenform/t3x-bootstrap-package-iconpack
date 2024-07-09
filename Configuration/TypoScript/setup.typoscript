@@ -1,10 +1,10 @@
 # Set templates and dataProcessing
 lib.contentElement {
   templateRootPaths {
-    5 = EXT:bootstrap_package_iconpack/Resources/Private/Templates/ContentElements/
+    6 = EXT:bootstrap_package_iconpack/Resources/Private/Templates/ContentElements/
   }
   partialRootPaths {
-    5 = EXT:bootstrap_package_iconpack/Resources/Private/Partials/ContentElements/
+    6 = EXT:bootstrap_package_iconpack/Resources/Private/Partials/ContentElements/
   }
 }
 
