@@ -27,7 +27,7 @@
 	"require": {
 		"php": ">=7.5.0",
 		"typo3/cms-core": ">=10.4 <13",
-		"quellenform/t3x-iconpack": ">=0.2 ^1.0",
+		"quellenform/t3x-iconpack": ">=1.1.7 ^1.0",
 		"bk2k/bootstrap-package": ">=12.0.10 <15"
 	},
 	"autoload": {
