@@ -10,6 +10,11 @@ lib.contentElement {
 
 # PAGE
 page {
+  # Include some small CSS modifications
+  includeCSS {
+    theme_mod = EXT:bootstrap_package_iconpack/Resources/Public/Css/theme.css
+  }
+
   10 {
     dataProcessing {
       10 {

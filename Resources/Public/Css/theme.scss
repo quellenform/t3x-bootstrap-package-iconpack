@@ -1,0 +1,14 @@
+//
+// Icongroup
+// --------------------------------------------------
+.icongroup-item-icon>span {
+	font-size: var(--icongroup-icon-size);
+}
+
+//
+// Bootstrap Package Icons
+// --------------------------------------------------
+.sociallinks-link-icon,
+.filelink-fileicon>.iconpack {
+	margin-right: 0;
+}
