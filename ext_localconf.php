@@ -22,5 +22,12 @@ defined('TYPO3') || die();
     if (version_compare(\TYPO3\CMS\Core\Utility\VersionNumberUtility::getCurrentTypo3Version(), '12', '<')) {
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/icons']['provider'][\Quellenform\BootstrapPackageIconpack\Icons\IconpackProvider::class]
             = \Quellenform\BootstrapPackageIconpack\Icons\IconpackProvider::class;
+        $removeIconProviders = [
+            \BK2K\BootstrapPackage\Icons\GlyphiconsProvider::class,
+            \BK2K\BootstrapPackage\Icons\IoniconsProvider::class
+        ];
+        foreach ($removeIconProviders as $iconProvider) {
+            unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/icons']['provider'][$iconProvider]);
+        }
     }
 })();

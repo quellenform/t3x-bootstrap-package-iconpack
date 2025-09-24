@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Quellenform\BootstrapPackageIconpack\:
+    resource: '../Classes/*'
+
+  Quellenform\BootstrapPackageIconpack\EventListener\ModifyIconProvidersEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'Quellenform/BootstrapPackageIconpack/ModifyIconProvidersEventListener'
+        event: BK2K\BootstrapPackage\Events\ModifyIconProvidersEvent
+        after: 'bk2k/bootstrap-package/modify-icon-providers'
