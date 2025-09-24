@@ -1,0 +1,142 @@
+categories:
+  BootstrapPackageIconpack:
+    label: 'Bootstrap Package Iconpack'
+
+settings:
+  page.theme.iconpackPreferredRenderTypes:
+    label: 'Preferred renderTypes for Bootstrap Iconpack'
+    description: 'A comma separated list of preferred Iconpack renderTypes for the icons used by EXT:bootstrap_package_icons (bpi).'
+    category: BootstrapPackageIconpack
+    type: string
+    enum:
+      svgInline: 'SVG Inline'
+      svgSprite: 'SVG Sprite'
+      webfont: 'Webfont'
+      svg: 'SVG Image'
+    default: 'svgSprite'
+
+  page.theme.socialmedia.channels.bluesky.icon:
+    label: 'Bluesky Icon'
+    description: 'Insert the iconfig string for Bluesky'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,bluesky'
+
+  page.theme.socialmedia.channels.discord.icon:
+    label: 'Discord Icon'
+    description: 'Insert the iconfig string for Discord'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,discord'
+
+  page.theme.socialmedia.channels.facebook.icon:
+    label: 'Facebook Icon'
+    description: 'Insert the iconfig string for Facebook'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,facebook'
+
+  page.theme.socialmedia.channels.github.icon:
+    label: 'Github Icon'
+    description: 'Insert the iconfig string for Github'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,github'
+
+  page.theme.socialmedia.channels.gitlab.icon:
+    label: 'Gitlab Icon'
+    description: 'Insert the iconfig string for Gitlab'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,gitlab'
+
+  page.theme.socialmedia.channels.instagram.icon:
+    label: 'Instagram Icon'
+    description: 'Insert the iconfig string for Instagram'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,instagram'
+
+  page.theme.socialmedia.channels.linkedin.icon:
+    label: 'LinkedIn Icon'
+    description: 'Insert the iconfig string for LinkedIn'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,linkedin'
+
+  page.theme.socialmedia.channels.mastodon.icon:
+    label: 'Mastodon Icon'
+    description: 'Insert the iconfig string for Mastodon'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,mastodon'
+
+  page.theme.socialmedia.channels.researchgate.icon:
+    label: 'Research Gate Icon'
+    description: 'Insert the iconfig string for Research Gate'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,researchgate'
+
+  page.theme.socialmedia.channels.rss.icon:
+    label: 'RSS Icon'
+    description: 'Insert the iconfig string for RSS Feeds'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,rss'
+
+  page.theme.socialmedia.channels.telegram.icon:
+    label: 'Telegram Icon'
+    description: 'Insert the iconfig string for Telegram'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,telegram'
+
+  page.theme.socialmedia.channels.threads.icon:
+    label: 'Threads Icon'
+    description: 'Insert the iconfig string for Threads'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,threads'
+
+  page.theme.socialmedia.channels.vimeo.icon:
+    label: 'Vimeo Icon'
+    description: 'Insert the iconfig string for Vimeo'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,vimeo'
+
+  page.theme.socialmedia.channels.vk.icon:
+    label: 'VK Icon'
+    description: 'Insert the iconfig string for VK'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,vk'
+
+  page.theme.socialmedia.channels.whatsapp.icon:
+    label: 'Whatsapp Icon'
+    description: 'Insert the iconfig string for Whatsapp'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,whatsapp'
+
+  page.theme.socialmedia.channels.x.icon:
+    label: 'X Icon'
+    description: 'Insert the iconfig string for X'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,x'
+
+  page.theme.socialmedia.channels.xing.icon:
+    label: 'Xing Icon'
+    description: 'Insert the iconfig string for Xing'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,xing'
+
+  page.theme.socialmedia.channels.youtube.icon:
+    label: 'Youtube Icon'
+    description: 'Insert the iconfig string for Youtube'
+    category: BootstrapPackageIconpack
+    type: string
+    default: 'bpi,youtube'

@@ -1,0 +1,4 @@
+name: quellenform/bootstrap-package-iconpack
+label: Iconpack for "Bootstrap Package"
+dependencies:
+  - quellenform/iconpack

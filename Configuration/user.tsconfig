@@ -1,0 +1,1 @@
+options.sites.hideSets := addToList(quellenform/iconpack)
