@@ -3,10 +3,6 @@
 defined('TYPO3') || die();
 
 (function () {
-    // Override ViewHelper
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][BK2K\BootstrapPackage\ViewHelpers\IconViewHelper::class] = [
-    'className' => Quellenform\BootstrapPackageIconpack\ViewHelpers\IconViewHelper::class,
-    ];
     // Register custom iconpack for template icons (social, fileicons, etc.)
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('iconpack')) {
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
