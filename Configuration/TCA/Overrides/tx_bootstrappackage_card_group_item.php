@@ -23,11 +23,19 @@ defined('TYPO3') || die();
                 'type' => 'user',
                 'renderType' => 'IconpackWizard'
             ]
+        ],
+        'header_icon' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
+            'config' => [
+                'type' => 'user',
+                'renderType' => 'IconpackWizard'
+            ]
         ]
     ]
 );
 
-// Override fields
+// Override display condition for icon file field in EXT:bootstrap_package
 $GLOBALS['TCA']['tx_bootstrappackage_card_group_item']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tx_bootstrappackage_card_group_item']['columns'],
     [
@@ -37,10 +45,10 @@ $GLOBALS['TCA']['tx_bootstrappackage_card_group_item']['columns'] = array_replac
     ]
 );
 
-// Add custom fields to TCA
+// Replace original icon switch in EXT:bootstrap_package
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tx_bootstrappackage_card_group_item',
-    'iconpack_enable,--linebreak--,iconpack;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
+    'iconpack_enable,--linebreak--,iconpack',
     '',
     'replace:link_icon_set'
 );
@@ -51,4 +59,12 @@ $GLOBALS['TCA']['tx_bootstrappackage_card_group_item']['columns'] = array_replac
     '--palette--;;empty',
     '',
     'replace:link_icon_identifier'
+);
+
+// Add custom field to palette
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'tx_bootstrappackage_card_group_item',
+    'header',
+    'header_icon',
+    'after:header'
 );

@@ -18,26 +18,21 @@ defined('TYPO3') || die();
     ]
 );
 
-// Override fields
+// Override display conditions for icon fields from EXT:bootstrap_package and EXT:iconpack
 $GLOBALS['TCA']['pages']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['pages']['columns'],
     [
         'page_icon' => [
-            'exclude' => 1,
             'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
             'displayCond' => 'FIELD:page_icon_enable:REQ:true'
         ],
         'nav_icon' => [
             'displayCond' => 'FIELD:page_icon_enable:REQ:false'
-        ],
-        // Hide original icon field from EXT:bootstrap_package
-        'nav_icon_identifier' => [
-            'displayCond' => 'FIELD:nav_icon_set:=:3',
         ]
     ]
 );
 
-// Remove unused fields
+// Remove original icon field from EXT:iconpack
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'pages',
     '--palette--;;empty',
@@ -45,10 +40,10 @@ $GLOBALS['TCA']['pages']['columns'] = array_replace_recursive(
     'replace:page_icon'
 );
 
-// Add custom fields to TCA
+// Replace icon switch in EXT:bootstrap_package
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'pages',
-    'page_icon_enable,--linebreak--,page_icon;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
+    'page_icon_enable,--linebreak--,page_icon',
     '1,3,4',
     'replace:nav_icon_set'
 );

@@ -27,7 +27,7 @@ defined('TYPO3') || die();
     ]
 );
 
-// Override fields
+// Override display condition for icon file field in EXT:bootstrap_package
 $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['columns'],
     [
@@ -37,11 +37,11 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     ]
 );
 
-// Add custom fields to TCA
+// Replace original icon switch in EXT:bootstrap_package
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'bootstrap_package_icons',
-    'iconpack_enable,--linebreak--,iconpack;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
+    'iconpack_enable,--linebreak--,iconpack',
     'replace:icon_set'
 );
 
