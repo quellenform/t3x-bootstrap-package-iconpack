@@ -1,0 +1,10 @@
+/*
+<%= fontFamilyName %> v<%= version %>
+*/
+@font-face {
+	font-family: "<%= fontFamilyName %>";
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: <%= fontSrc2 %>;
+}

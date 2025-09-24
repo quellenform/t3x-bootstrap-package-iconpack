@@ -1,0 +1,33 @@
+{
+	"name": "t3x-bootstrap-package-iconpack",
+	"version": "1.0.0",
+	"repository": "https://github.com/quellenform/t3x-bootstrap-package-iconpack",
+	"description": "",
+	"readme": "../README.md",
+	"homepage": "https://www.quellenform.at/",
+	"author": "Stephan Kellermayr",
+	"license": "GPL-3.0+",
+	"engines": {
+		"npm": ">=9.0.0 <10.2"
+	},
+	"devDependencies": {
+		"grunt": "^1.6.1",
+		"grunt-contrib-clean": "^2.0.1",
+		"grunt-contrib-cssmin": "^5.0.0",
+		"grunt-contrib-imagemin": "^4.0.0",
+		"grunt-contrib-pug": "3.0.0",
+		"grunt-jsbeautifier": "0.2.13",
+		"grunt-sass": "^3.1.0",
+		"grunt-svgstore": "2.0.0",
+		"grunt-webfont": "^1.7.2",
+		"grunt-xmlmin": "0.1.8",
+		"sass-embedded": "1.89.2",
+		"ttf2woff2": "^5.0.0",
+		"yamljs": "^0.3.0"
+	},
+	"overrides": {
+		"grunt-webfont": {
+			"ttf2woff2": "$ttf2woff2"
+		}
+	}
+}

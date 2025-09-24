@@ -1,0 +1,32 @@
+@use "bootstrappackageiconpack";
+@use "icons";
+
+// Variables
+// --------------------------
+$bpi-css-prefix : bpi !default;
+
+// Core CSS
+// -------------------------
+.#{$bpi-css-prefix} {
+  font-family: "Bootstrap Package Iconpack";
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.#{$bpi-css-prefix}::before {
+  content: var(--#{$bpi-css-prefix});
+}
+
+// Icons
+// -------------------------
+@each $name, $icon in icons.$bpi-icons {
+  .#{$bpi-css-prefix}-#{$name} {
+    --bpi: "#{$icon}";
+  }
+}
