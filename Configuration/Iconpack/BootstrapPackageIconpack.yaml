@@ -1,0 +1,29 @@
+iconpack:
+  title: "Bootstrap Package Iconpack"
+  key: "bpi"
+  version: "0.0.1"
+  hidden: true
+
+  renderTypes:
+    _default:
+      prefix: "bpi-"
+      attributes:
+        class: "bpi"
+
+    webfont:
+      css: "EXT:bootstrap_package_iconpack/Resources/Public/Iconpack/css/bpi.min.css"
+
+    svg:
+      source: "EXT:bootstrap_package_iconpack/Resources/Public/Iconpack/svgs/"
+
+    svgSprite:
+      source: "EXT:bootstrap_package_iconpack/Resources/Public/Iconpack/sprites/bpi.svg"
+      attributes:
+        fill: "currentColor"
+
+    svgInline:
+      source: "EXT:bootstrap_package_iconpack/Resources/Public/Iconpack/svgs/"
+      attributes:
+        fill: "currentColor"
+
+  icons: "EXT:bootstrap_package_iconpack/Resources/Public/Iconpack/metadata/icons.yml"

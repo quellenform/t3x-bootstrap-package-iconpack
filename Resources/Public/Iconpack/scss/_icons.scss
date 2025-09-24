@@ -1,0 +1,47 @@
+$bpi-bluesky: "\\f000";
+$bpi-discord: "\\f001";
+$bpi-facebook: "\\f002";
+$bpi-file: "\\f003";
+$bpi-file-audio: "\\f004";
+$bpi-file-image: "\\f005";
+$bpi-file-video: "\\f006";
+$bpi-github: "\\f007";
+$bpi-gitlab: "\\f008";
+$bpi-instagram: "\\f009";
+$bpi-linkedin: "\\f00a";
+$bpi-mastodon: "\\f00b";
+$bpi-researchgate: "\\f00c";
+$bpi-rss: "\\f00d";
+$bpi-telegram: "\\f00e";
+$bpi-threads: "\\f00f";
+$bpi-vimeo: "\\f010";
+$bpi-vk: "\\f011";
+$bpi-whatsapp: "\\f012";
+$bpi-x: "\\f013";
+$bpi-xing: "\\f014";
+$bpi-youtube: "\\f015";
+
+$bpi-icons: (
+  "bluesky": $bpi-bluesky,
+  "discord": $bpi-discord,
+  "facebook": $bpi-facebook,
+  "file": $bpi-file,
+  "file-audio": $bpi-file-audio,
+  "file-image": $bpi-file-image,
+  "file-video": $bpi-file-video,
+  "github": $bpi-github,
+  "gitlab": $bpi-gitlab,
+  "instagram": $bpi-instagram,
+  "linkedin": $bpi-linkedin,
+  "mastodon": $bpi-mastodon,
+  "researchgate": $bpi-researchgate,
+  "rss": $bpi-rss,
+  "telegram": $bpi-telegram,
+  "threads": $bpi-threads,
+  "vimeo": $bpi-vimeo,
+  "vk": $bpi-vk,
+  "whatsapp": $bpi-whatsapp,
+  "x": $bpi-x,
+  "xing": $bpi-xing,
+  "youtube": $bpi-youtube,
+);
