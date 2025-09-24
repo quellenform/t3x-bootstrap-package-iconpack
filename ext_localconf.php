@@ -25,5 +25,9 @@ defined('TYPO3') || die();
         foreach ($removeIconProviders as $iconProvider) {
             unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/icons']['provider'][$iconProvider]);
         }
+        // Configure upgrade wizard
+        // @extensionScannerIgnoreLine
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['bootstrapPackageIconpack_migrateFromBeta']
+            = \Quellenform\BootstrapPackageIconpack\Updates\MigrateFromBeta::class;
     }
 })();
