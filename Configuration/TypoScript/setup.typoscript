@@ -1,3 +1,6 @@
+# Override default renderType for Bootstrap Package Icons provided by EXT:iconpack
+plugin.tx_iconpack.settings.renderTypes.bpi = {$page.theme.iconpackRenderType}
+
 # Set templates and dataProcessing
 lib.contentElement {
   templateRootPaths {
@@ -10,6 +13,9 @@ lib.contentElement {
 
 # PAGE
 page {
+  # Completely remove icon libraries from EXT:bootstrap_package, it's just crap.
+  includeCSSLibs.bootstrappackageicon >
+
   # Include some small CSS modifications
   includeCSS {
     theme_mod = EXT:bootstrap_package_iconpack/Resources/Public/Css/theme.css

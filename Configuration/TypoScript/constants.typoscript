@@ -1,0 +1,46 @@
+# CUSTOM SUBCATEGORIES
+# customsubcategory=265=Bootstrap Package Iconpack
+
+page.theme {
+  # cat=bootstrap package: iconpack/265; type=options[SVG Inline=svgInline,SVG Sprite=svgSprite,Webfont=webfont,SVG Image=svg]; label=Preferred renderType for Bootstrap Iconpack: Preferred Iconpack renderType for the icons used by EXT:bootstrap_package_icons (bpi).
+  iconpackRenderType = svgSprite
+
+  socialmedia.channels {
+    # cat=bootstrap package: iconpack/265; type=string; label=Bluesky Icon: Insert the iconfig string for Bluesky
+    bluesky.icon = bpi,bluesky
+    # cat=bootstrap package: iconpack/265; type=string; label=Discord Icon: Insert the iconfig string for Discord
+    discord.icon = bpi,discord
+    # cat=bootstrap package: iconpack/265; type=string; label=Facebook Icon: Insert the iconfig string for Facebook
+    facebook.icon = bpi,facebook
+    # cat=bootstrap package: iconpack/265; type=string; label=Github Icon: Insert the iconfig string for Github
+    github.icon = bpi,github
+    # cat=bootstrap package: iconpack/265; type=string; label=Instagram Icon: Insert the iconfig string for Instagram
+    instagram.icon = bpi,instagram
+    # cat=bootstrap package: iconpack/265; type=string; label=LinkedIn Icon: Insert the iconfig string for XLinkedInXX
+    linkedin.icon = bpi,linkedin
+    # cat=bootstrap package: iconpack/265; type=string; label=Mastodon Icon: Insert the iconfig string for Mastodon
+    mastodon.icon = bpi,mastodon
+    # cat=bootstrap package: iconpack/265; type=string; label=Research Gate Icon: Insert the iconfig string for Research Gate
+    researchgate.icon = bpi,researchgate
+    # cat=bootstrap package: iconpack/265; type=string; label=RSS Icon: Insert the iconfig string for RSS Feeds
+    rss.icon = bpi,rss
+    # cat=bootstrap package: iconpack/265; type=string; label=Telegram Icon: Insert the iconfig string for Telegram
+    telegram.icon = bpi,telegram
+    # cat=bootstrap package: iconpack/265; type=string; label=Threads Icon: Insert the iconfig string for Threads
+    threads.icon = bpi,threads
+    # cat=bootstrap package: iconpack/265; type=string; label=Vimeo Icon: Insert the iconfig string for Vimeo
+    vimeo.icon = bpi,vimeo
+    # cat=bootstrap package: iconpack/265; type=string; label=VK Icon: Insert the iconfig string for VK
+    vk.icon = bpi,vk
+    # cat=bootstrap package: iconpack/265; type=string; label=Whatsapp Icon: Insert the iconfig string for Whatsapp
+    whatsapp.icon = bpi,whatsapp
+    # cat=bootstrap package: iconpack/265; type=string; label=X Icon: Insert the iconfig string for X
+    x.icon = bpi,x
+    # Keep this line for backward compatibility to v10/11
+    twitter.icon < .x.icon
+    # cat=bootstrap package: iconpack/265; type=string; label=Xing Icon: Insert the iconfig string for Xing
+    xing.icon = bpi,xing
+    # cat=bootstrap package: iconpack/265; type=string; label=Youtube Icon: Insert the iconfig string for Youtube
+    youtube.icon = bpi,youtube
+  }
+}
