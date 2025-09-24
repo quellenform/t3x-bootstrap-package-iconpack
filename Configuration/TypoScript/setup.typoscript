@@ -23,126 +23,94 @@ page {
 
   10 {
     dataProcessing {
-      10 {
-        dataProcessing {
-          1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-          1628754217 {
-            iconSet.field = page_icon_enable
-            iconIdentifier.field = page_icon
-          }
+      # mainnavigation
+      10.dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = page_icon_enable
+          iconIdentifier.field = page_icon
         }
       }
-      20 {
-        dataProcessing {
-          1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-          1628754217 {
-            iconSet.field = page_icon_enable
-            iconIdentifier.field = page_icon
-          }
+      # subnavigation
+      20.dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = page_icon_enable
+          iconIdentifier.field = page_icon
         }
       }
-      30 {
-        dataProcessing {
-          1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-          1628754217 {
-            iconSet.field = page_icon_enable
-            iconIdentifier.field = page_icon
-          }
+      # breadcrumb
+      30.dataProcessing {
+        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1628754217 {
+          iconSet.field = page_icon_enable
+          iconIdentifier.field = page_icon
         }
       }
-      1629126321 {
-        dataProcessing {
-          1629202464 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-          1629202464 {
-            iconSet.field = page_icon_enable
-            iconIdentifier.field = page_icon
-          }
+      # footernavigation
+      1629126321.dataProcessing {
+        1629202464 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+        1629202464 {
+          iconSet.field = page_icon_enable
+          iconIdentifier.field = page_icon
         }
       }
     }
   }
 }
 
-# CTYPE: BOOTSTRAP PACKAGE TEXTICON
-tt_content.texticon {
-  dataProcessing {
+tt_content {
+  # CTYPE: BOOTSTRAP PACKAGE TEXTICON
+  texticon.dataProcessing {
     1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
     1628754217 {
       iconSet.field = iconpack_enable
       iconIdentifier.field = iconpack
     }
   }
-}
 
-# CTYPE: tx_bootstrappackage_icon_group_item
-tt_content.icon_group {
-  dataProcessing {
-    20 {
-      dataProcessing {
-        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-        1628754217 {
-          iconSet.field = iconpack_enable
-          iconIdentifier.field = iconpack
-        }
-      }
+  # CTYPE: tx_bootstrappackage_icon_group_item
+  icon_group.dataProcessing.20.dataProcessing {
+    1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+    1628754217 {
+      iconSet.field = iconpack_enable
+      iconIdentifier.field = iconpack
     }
   }
-}
 
-# CTYPE: tx_bootstrappackage_card_group_item
-tt_content.card_group {
-  dataProcessing {
-    20 {
-      dataProcessing {
-        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-        1628754217 {
-          iconSet.field = iconpack_enable
-          iconIdentifier.field = iconpack
-        }
-      }
+  # CTYPE: tx_bootstrappackage_card_group_item
+  card_group.dataProcessing.20.dataProcessing {
+    1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+    1628754217 {
+      iconSet.field = iconpack_enable
+      iconIdentifier.field = iconpack
     }
   }
-}
 
-# CTYPE: tx_bootstrappackage_timeline_item
-tt_content.timeline {
-  dataProcessing {
-    10 {
-      dataProcessing {
-        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-        1628754217 {
-          iconSet.field = iconpack_enable
-          iconIdentifier.field = iconpack
-        }
-      }
+  # CTYPE: tx_bootstrappackage_timeline_item
+  timeline.dataProcessing.10.dataProcessing {
+    1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+    1628754217 {
+      iconSet.field = iconpack_enable
+      iconIdentifier.field = iconpack
     }
   }
-}
 
-# CTYPE: MENU CARD SUBPAGES
-tt_content.menu_card_dir {
-  dataProcessing {
-    20 {
-      dataProcessing {
-        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-        1628754217 {
-          iconSet.field = page_icon_enable
-          iconIdentifier.field = page_icon
-        }
-      }
+  # CTYPE: MENU CARD DIR
+  menu_card_dir.dataProcessing.20.dataProcessing {
+    1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+    1628754217 {
+      iconSet.field = page_icon_enable
+      iconIdentifier.field = page_icon
     }
   }
-}
-tt_content.menu_card_list {
-  dataProcessing {
-    20 {
-      dataProcessing {
-        1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
-        1628754217 {
-          iconSet.field = page_icon_enable
-          iconIdentifier.field = page_icon
-        }
-      }
+
+  # CTYPE: MENU CARD LIST
+  menu_card_list.dataProcessing.20.dataProcessing {
+    1628754217 = Quellenform\BootstrapPackageIconpack\DataProcessing\IconpackDataProcessor
+    1628754217 {
+      iconSet.field = page_icon_enable
+      iconIdentifier.field = page_icon
     }
   }
 }
