@@ -1,7 +1,7 @@
 # Override default renderType for Bootstrap Package Icons provided by EXT:iconpack
 plugin.tx_iconpack.settings.renderTypes.bpi = {$page.theme.iconpackRenderType}
 
-# Set templates and dataProcessing
+# Define additional templates to display icons correctly in various content elements
 lib.contentElement {
   templateRootPaths {
     6 = EXT:bootstrap_package_iconpack/Resources/Private/Templates/ContentElements/
@@ -10,6 +10,14 @@ lib.contentElement {
     6 = EXT:bootstrap_package_iconpack/Resources/Private/Partials/ContentElements/
   }
 }
+# Overwrite the uploads template for TYPO3 v10, as "f:format.trim()" does not exist there
+[typo3.version < "11"]
+lib.contentElement {
+  templateRootPaths {
+    7 = EXT:bootstrap_package_iconpack/Resources/Private/Templates/ContentElements-v10/
+  }
+}
+[END]
 
 # PAGE
 page {
@@ -22,6 +30,12 @@ page {
   }
 
   10 {
+    # Include templates for social links
+    partialRootPaths {
+      1 = EXT:bootstrap_package_iconpack/Resources/Private/Partials/Page/
+      2 = {$page.fluidtemplate.partialRootPath}
+    }
+
     dataProcessing {
       # mainnavigation
       10.dataProcessing {
