@@ -7,7 +7,6 @@
 
 TYPO3 CMS Extension `bootstrap_package_iconpack`
 
-
 ## What does it do?
 
 This extension replaces the hard-coded icons in the extension [bootstrap_package](https://github.com/benjaminkott/bootstrap_package)
@@ -29,7 +28,6 @@ Of course, it is still possible to use an image as provided by *EXT:bootstrap_pa
 In addition, the icons integrated in *EXT:bootstrap_package*, which are used to display social icons and file downloads,
 are replaced by a separate iconpack, ensuring that all display options (svgSprite, svgInline, webfont, svg) are supported.
 
-
 ## Installation
 
 1. Make sure you have installed *EXT:bootstrap_package* and *EXT:iconpack*, as well as a suitable iconpack provider
@@ -47,3 +45,18 @@ are replaced by a separate iconpack, ensuring that all display options (svgSprit
 > the modifications correctly!
 >
 > Hint: Take a look at the provided Typoscript/Templates.
+
+## Contribute | Say Thanks!
+
+- If you like this extension, **use it**.
+- If you think you can do something better, be so kind and **contribute your
+  part** to it
+- If you love the extension or if you want to support further development,
+  [donate an amount of your choice](https://www.paypal.me/quellenform)
+
+## Credits
+
+I would like to thank everyone who contributed in any way to the creation of this extension, but especially:
+
+- Alexander Grein [@mediaessenz](https://github.com/mediaessenz)
+- All [contributors](https://github.com/quellenform/t3x-iconpack/graphs/contributors)
