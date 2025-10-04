@@ -11,6 +11,7 @@ namespace Quellenform\BootstrapPackageIconpack\Updates;
  * LICENSE.txt file that was distributed with this source code.
  */
 
+use Doctrine\DBAL\Exception\InvalidFieldNameException;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -87,25 +88,29 @@ final class MigrateFromBeta implements UpgradeWizardInterface
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
         $queryBuilder = $connectionPool->getQueryBuilderForTable($table);
         $queryBuilder->getRestrictions()->removeAll();
-        $query = $queryBuilder
-            ->select('uid', 'iconpack')
-            ->from($table)
-            ->where(
-                $queryBuilder->expr()->eq(
-                    'header_icon',
-                    $queryBuilder->createNamedParameter('', Connection::PARAM_STR)
-                ),
-                $queryBuilder->expr()->neq(
-                    'iconpack',
-                    $queryBuilder->createNamedParameter('', Connection::PARAM_STR)
-                )
-            );
-        if (version_compare(VersionNumberUtility::getCurrentTypo3Version(), '11', '<')) {
-            /** @disregard P1013 Undefined method */
-            // @extensionScannerIgnoreLine
-            return $query->execute()->fetchAllAssociativeIndexed();
-        } else {
-            return $query->executeQuery()->fetchAllAssociative();
+        try {
+            $query = $queryBuilder
+                ->select('uid', 'iconpack')
+                ->from($table)
+                ->where(
+                    $queryBuilder->expr()->eq(
+                        'header_icon',
+                        $queryBuilder->createNamedParameter('', Connection::PARAM_STR)
+                    ),
+                    $queryBuilder->expr()->neq(
+                        'iconpack',
+                        $queryBuilder->createNamedParameter('', Connection::PARAM_STR)
+                    )
+                );
+            if (version_compare(VersionNumberUtility::getCurrentTypo3Version(), '11', '<')) {
+                /** @disregard P1013 Undefined method */
+                // @extensionScannerIgnoreLine
+                return $query->execute()->fetchAllAssociativeIndexed();
+            } else {
+                return $query->executeQuery()->fetchAllAssociative();
+            }
+        } catch (InvalidFieldNameException $e) {
+            return [];
         }
     }
 
