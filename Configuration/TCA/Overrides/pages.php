@@ -26,6 +26,12 @@ $GLOBALS['TCA']['pages']['columns'] = array_replace_recursive(
             'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
             'displayCond' => 'FIELD:page_icon_enable:REQ:true'
         ],
+        'nav_icon_identifier' => [
+            'config' => [
+                'type' => 'passthrough',
+                'renderType' => null
+            ]
+        ],
         'nav_icon' => [
             'displayCond' => 'FIELD:page_icon_enable:REQ:false'
         ]
